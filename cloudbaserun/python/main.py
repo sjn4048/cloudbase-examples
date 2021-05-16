@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def deep_thought_the_enormous_supercomputer():
+def deep_thought_the_enormous_super_computer():
     return '<h1>42</h1>'
 
 
