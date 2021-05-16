@@ -2,13 +2,13 @@
   "envId": "{{env.ENV_ID}}",
   "version": "2.0",
   "framework": {
-    "name": "python-hello-world",
+    "name": "deep-thought",
     "plugins": {
       "container": {
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "serviceName": "deep-thought",
-          "servicePath": "/answer_to_the_ultimate_question_of_life_universe_and_everything",
+          "servicePath": "/answer_of_life_universe_and_everything",
           "containerPort": 8080
         }
       }
