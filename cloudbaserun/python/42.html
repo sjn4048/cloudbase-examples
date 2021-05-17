@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>the answer to life, the universe, and everything</title>
+</head>
+<body>
+<script>
+    let calcTime = 750 * 10000 * 365 * 24 * 60 * 60
+    function startTimer(duration, display) {
+        setInterval(function () {
+            let years = Math.floor(duration / (60 * 60 * 24 * 365))
+            let days = Math.floor(duration / (60 * 60 * 24) % 365)
+            let hours = Math.floor(duration / (60 * 60) % 24)
+            let minutes = Math.floor(duration / 60 % 60)
+            let seconds = Math.floor(duration % 60)
+
+            minutes = minutes < 10 ? "0" + minutes : minutes
+            seconds = seconds < 10 ? "0" + seconds : seconds
+
+            display.textContent = `${years} years ${days} days ${hours}:${minutes}:${seconds}`
+
+            if (duration > 0) {
+                --duration
+            } else {
+                document.querySelector('#result').innerHTML = calc().toString()
+            }
+        }, 1000)
+    }
+
+    window.onload = function () {
+        let display = document.querySelector('#time')
+        startTimer(calcTime, display)
+    };
+    let calc=()=>{let awesdxbcvew=0,ewfdwedfvb=0,ewfgfdsafdvnb=0,sfdbvdfsgn=0; for(let lkjhvgcfghjk=0;lkjhvgcfghjk<9;lkjhvgcfghjk++){awesdxbcvew+=lkjhvgcfghjk; ewfdwedfvb+=awesdxbcvew; ewfgfdsafdvnb+=ewfdwedfvb; sfdbvdfsgn+=ewfgfdsafdvnb; sfdbvdfsgn=window["\x4d\x61\x74\x68"]['\x66\x6c\x6f\x6f\x72'](sfdbvdfsgn/window["\x4d\x61\x74\x68"]['\x6d\x61\x78'](1,lkjhvgcfghjk))}return sfdbvdfsgn-3}
+</script>
+<div>Your calculation will soon be finished. Estimated time ahead:
+    <span id="time">Loading..</span></div>
+<br/>
+<div>The answer is:
+    <span id="result">Please wait</span></div>
+</body>
+</html>

@@ -1,13 +1,13 @@
 import os
 
-from flask import Flask
+from flask import Flask, send_file
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def deep_thought_the_enormous_super_computer():
-    return '<h1>42</h1>'
+    return send_file("42.html")
 
 
 if __name__ == "__main__":
